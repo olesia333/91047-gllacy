@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Olesya Panova](https://up.htmlacademy.ru/htmlcss/21/user/91047).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Кошара](https://htmlacademy.ru/profile/rednaxxxela).
 
 ---
 
