@@ -6,8 +6,8 @@
   </head>
   <body>
     <header class="main-header">
-  	  <a><img src="img/logo.svg" width="154" height="63" alt="Логотип магазина Глэйси"></a>
-      <nav class="main-nav">
+      <nav class="main-nav" area-label="Навигация сайта">
+      	<a><img src="img/logo.svg" width="154" height="63" alt="Логотип магазина Глэйси"></a>
       	<ul class="site-nav">
       	  <li class="site-nav-item site-nav-item-dropdown"><a href="#">Каталог</a>
             <ul class="sub-menu">
@@ -22,21 +22,39 @@
           <li class="site-nav-item"><a href="compani.html">О Компании</a></li>
         </ul>
       </nav>
-      <ul class="user-nav">
+      <ul class="user-nav" area-label="Меню пользователя">
         <li class="search">
           <a href="#" class="search-btn">Поиск</a>
           <div class="search-form">
-            <!--TODO Сделать форму-->
+            <form action="https://echo.htmlacademy.ru" class="search-form">
+              <p>	
+                <input type="search" id="search" name="search" placeholder="Что ищем?" required>
+                <label for="search" class="visually-hidden">Что ищем?</label>
+                <button class="search-btn" type="submit">Искать</button>
+              </p>
+            </form>
           </div>
         </li>
         <li class="user-block">
           <a href="#" class="user-block-btn">Вход</a>
           <div class="user-block-form">
-            <!--TODO Сделать форму-->
+          	<form action="https://echo.htmlacademy.ru" class="user-block-form" method="post">
+          	  <p>
+                <input type="email" name="email" id="email" placeholder="Электронная почта" required>
+                <label for="email" class="visually-hidden">Электронная почта</label>
+              </p>
+              <p>
+              	<input type="password" name="password" id="password" placeholder="Пароль" required>
+              	<label for="password" class="visually-hidden">Пароль</label>
+              </p>
+              <button class="btn user-block-form-btn" type="submit">Войти</button>
+          	</form>
+          	<a href="remember.html" class="user-block-form-link">Забыли пароль?</a>
+          	<a href="new-pass.html" class="user-block-form-link">Новая регистрация</a>
           </div>
         </li>
         <li class="cart">
-            <a href="cart.html" class="cart-btn">Пусто</a>
+            <a href="cart.html" class="cart-btn">Корзина <span class="cart-btn-content">Пусто</span></a>
         </li>
       </ul>
       <div class="working-hours"><p>
@@ -45,9 +63,31 @@
     </header>
     <main class="container">
       <h1 class="visually-hidden">Магазин Глэйси</h1>
-      <div class="carousel">
-        <!--Слайдер-->
-      </div>
+      <section class="carousel">
+        <h2 class="visually-hidden">Мороженое по акции</h2>
+        <div class="carousel-outer">
+          <div class="carousel-outer-item">
+            <h3>Крем-брюле и пломбир с малиной и джемом</h3>
+            <img src="img/slide-img-1.png" alt="Сладкая парочка: крем-брюле и пломбир с малиной и джемом">
+            <a href="product.html" class="carousel-btn btn">Давайте оба!</a>
+          </div>
+          <div class="carousel-outer-item">
+            <h3>Шоколадный пломбир и лимонный сорбет</h3>
+            <img src="img/slide-img-2.png" alt="Сладкая парочка: шоколадный пломбир и лимонный сорбет">
+            <a href="product.html" class="carousel-btn btn">Давайте оба!</a>
+          </div>
+          <div class="carousel-outer-item">
+            <h3>Пломбир с помадкой и клубничный щербет</h3>
+            <img src="img/slide-img-2.png" alt="Сладкая парочка: шоколадный пломбир и лимонный сорбет">
+            <a href="product.html" class="carousel-btn btn">Давайте оба!</a>
+          </div>
+        </div>
+        <div class="carousel-dots">
+          <button class="carousel-dot">Слайд 1</button>
+          <button class="carousel-dot">Слайд 2</button>
+          <button class="carousel-dot">Слайд 3</button>
+        </div>
+      </section>
       <section class="promo">
         <h2 class="visually-hidden">Промоакции</h2>
         <ul class="promo-list">
@@ -108,10 +148,19 @@
       <section class="subscribe">
         <h2 class="visually-hidden">Наша рассылка</h2>
         <p class="subscribe-description">Подпишитесь на нашу сладкую рассылку и будуту всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-  			<!--TODO Сделать форму-->
+  			<form action="https://echo.htmlacademy.ru" class="subscribe-form" method="post">
+  				<p>
+  					<label for="subscribe-email" class="visually-hidden">Электронная почта</label>
+  					<input type="email" class="subscribe-email" id="subscribe-email" name="subscribe-email" placeholder="Электронная почта" required>
+  				</p>
+  				<button class="btn subscribe-form-btn" type="submit">Отпрвить</button>
+  			</form>
       </section>
       <section class="contaсt-us">
         <h2 class="visually-hidden">Контакты</h2>
+        <div class="contact-us-map">
+        	<img src="img/map.jpg" alt="Карта офиса и офлайн-магазина Глейси">
+        </div>
         <p class="contact-us-adress">Адрес главного офиса и офлайн-магазина: <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
         <p class="contact-us-tel">Для заказов по телефону: <a href="tel:88124502525">8 812 450-25-25 </a>(c 10 до 20 ежедневно)</p>
         <a href="#" class="contaсt-us-btn btn">Форма обратной связи</a>
@@ -142,8 +191,22 @@
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим</p>
-    	<!--TODO Сделать форму-->
-        <span class="modal-close">x</span>
+        <form action="https://echo.htmlacademy.ru" methoid="post" class="feedback-form">
+          <p>
+          	<label for="feedback-name" class="visually-hidden">Ваше имя</label>
+          	<input type="text" name="name" id="feedback-name" class="feedback-name" placeholder="Как вас зовут?" required>
+          </p>
+          <p>
+          	<label for="feedback-email" class="visually-hidden">Ваша почта</label>
+          	<input type="email" name="feedback-email" id="feedback-email" class="feedback-email" placeholder="Ваша почта для ответа?" required>
+          </p>
+          <p>
+          	<label for="feedback-message" class="visually-hidden">Ваше сообщение</label>
+          	<textarea name="feedback-message" id="feedback-message" class="feedback-message" placeholder="Напишите что-нибудь..."></textarea>
+          </p>
+          <button class="btn feedback-btn" type="submit">Отправить</button>
+        </form>	
+      <button class="modal-close">Закрыть</button>
     </section>
   </body>
 </html>
