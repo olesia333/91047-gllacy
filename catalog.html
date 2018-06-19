@@ -6,7 +6,7 @@
   </head>
   <body>
   	<header class="main-header">
-  		<nav class="main-nav" area-label="Навигация сайта">
+      <nav class="main-nav" area-label="Навигация сайта">
         <a><img src="img/logo.svg" width="154" height="63" alt="Логотип магазина Глэйси"></a>
   			<ul class="site-nav">
   				<li class="site-nav-item site-nav-item-dropdown"><a href="#">Каталог</a>
@@ -26,12 +26,12 @@
         <li class="search">
           <a href="#" class="search-btn">Поиск</a>
           <div class="search-form">
-            <form action="https://echo.htmlacademy.ru" class="search-form">
-            <p> 
-             <input type="search" id="search" name="search" placeholder="Что ищем?" required>
-              <label for="search" class="visually-hidden">Что ищем?</label>
-              <button class="search-btn" type="submit">Искать</button>
-            </p>
+            <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
+              <p> 
+                <input type="search" id="search" name="search" placeholder="Что ищем?" required>
+                <label for="search" class="visually-hidden">Что ищем?</label>
+                <button class="search-btn" type="submit">Искать</button>
+              </p>
             </form>
           </div>
         </li>
@@ -94,7 +94,7 @@
       </ul>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-          <form action="https://echo.htmlacademy.ru" class="form-filter">
+          <form action="https://echo.htmlacademy.ru" class="form-filter" method="get">
             <fieldset>
               <legend class="filters-title">Сортировка</legend>
               <select class="filter-select" name="sort" id="sort">
@@ -104,13 +104,9 @@
                 <option value="fat" class="filter-select-opinion">по жирности</option>
               </select>
             </fieldset>
-            <fieldset>
-              <legend class="filters-title">Цена: 100 руб. - 500 руб.</legend>
-              <label for="price-start" class="visually-hidden">Цена: 100 руб. — 500 руб.</label>            
-              <input type="range" name="price-start" id="price-start" min="100" max="500" step="5" value="250">
-              <label for="price-end" class="visually-hidden">Цена: 100 руб. — 500 руб.</label>            
-              <input type="range" name="price-end" id="price-end" min="100" max="500" step="5" value="250">              
-            </fieldset>
+            <div class="range">
+              <!--Ползунок-->
+            </div>
             <fieldset class="filters-title">
               <legend>Наполнители</legend>
               <ul>
