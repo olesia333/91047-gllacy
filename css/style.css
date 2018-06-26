@@ -2,13 +2,11 @@
 body {
   margin: 0;
   padding: 0;
-
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
   color: #ffffff;
-
   background-color: #8ca496;
 }
 
@@ -23,82 +21,124 @@ body {
   overflow: hidden;
 }
 
-a {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18px;
+/*Ссылки*/
 
-  color: #ffffff;
-
+.link a, .link-black a { 
   text-decoration: underline;
-  text-decoration-color: rgb(255, 255, 255,  0.3);
 }
 
-a:hover, a:focus {
+.link {
+  color: #ffffff;
+  text-decoration-color: rgb(255, 255, 255, 0.3);
+}
+
+.link:hover, .link:focus {
   color: #ffbc9e;
-
-  text-decoration-color: rgb(255, 188, 158,  0.3);
+  text-decoration-color: rgb(255, 188, 158, 0.3);
 }
+
+.link-black{
+  color: #323232;
+  text-decoration-color: rgb(50, 50, 50, 0.3);
+}
+
+.link-black:hover,.link-black:focus {
+  color: #e84d37;
+  text-decoration-color: rgb(232, 77, 55, 0.3);
+}
+
+
+/*Кнопки*/
 
 .btn, .btn:hover, .btn:focus {
   font: inherit;
   text-decoration: none;
-  color: #ffffff;
   text-align: center;
   vertical-align: middle;
-
   border: none;
   border-radius: 20px;
 }
 
 .btn {
-  background-color: #ffffff;
+  color: #ffffff;
   background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+
 }
 
 .btn:hover {
+  color: #ffffff;
   box-shadow: 0 2px 2px #ac1000;
   background-color: rgba(255, 255, 255, 0.2);
-  background-color: #ffffff;
   background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
 }
 
 .btn:focus {
+  color: #fefefe;
   box-shadow: inset 0 2px 2px #942718;
   background-color: rgba(0, 0, 0, 0.07);
-  background-color: #ffffff;
   background-image: linear-gradient(to top, #f26843 0%, #e74a35 100%);
 }
 
-.site-nav, 
-.sub-menu, 
-.user-nav, 
-.promo-list, 
-.popular-list, 
-.social-list, 
-.workflow-list, 
-.breadcrumbs, 
-.catalog-list,
-.filter-fat-list,
-.filter-fill-list,
-.pagination-list {
+.small-btn, /*Небольшие кнопки*/
+.small-btn:hover,
+.small-btn:focus {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.big-btn, /*Большая кнопка*/
+.big-btn:hover,
+.big-btn:focus {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.filter-btn, /*Кнопка фильтра*/
+.filter-btn:hover,
+.filter-btn:focus {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.filter-btn {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  background-color: rgb(255,255,255,0.2);
+}
+
+.filter-btn:hover {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.filter-btn:focus {
+  color: #323232;
+  box-shadow: inset 0 2px 1px #696969;
+  background-color: #ededed;
+}
+
+.list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.site-nav {
+.site-nav a, .site-nav a:focus{
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
+  color: #ffffff;
+  text-decoration-color: rgb(255, 255, 255, 0.3);
 }
 
 .site-nav a:hover {
   text-decoration: none;
   color: #333333;
-
   background-color: #f7f6f3;
-
   border-radius: 15px;
 }
 
@@ -109,34 +149,35 @@ a:hover, a:focus {
 
 .current {
   color: #ffffff;
-
   border-radius: 15px;
   background-color: #d07058;
 }
 
 .sub-menu {
-  color: #323232;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-  
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   background-color: #f8f7f4;
-
   border-radius: 5px;
 }
 
-.sub-menu li {
+.sub-menu a, 
+.sub-menu a:hover, 
+.sub-menu a:focus{
   border-radius: 0;
 }
 
 .sub-menu a {
-  color: #323232;  
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #323232; border-radius: 0;
 }
 
 .sub-menu a:hover {
   background-color: #fbded7;
-   border-radius: 0;
+}
+
+.sub-menu a:focus {
+  background-color: #f6b5a5;
 }
 
 .sub-menu-promo-link a {
@@ -147,73 +188,40 @@ a:hover, a:focus {
   background-color: #fbded7;
 }
 
-.user-nav a { 
-  text-decoration: none;
-  color: #ffffff;
+.user-nav {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
-
-  background-color: rgb(255, 255, 255, 0.2);
-  border-radius: 15px;
 }
 
-.user-nav a:hover {
+.user-nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px; 
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255, 0.2);
+}
+
+.user-nav-link:hover {
   text-decoration: none;
   color: #323232;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
-
   background-color: #f8f7f4;
 }
 
-.user-block-login, 
-.search-form, 
-.cart-content {
-  color: #323232;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-
+.user-menu-form {
   border-radius: 5px;
   box-shadow: 0 20px 20px rgb(0, 0, 0, 0.4);
   background-color: #f8f7f4;
 }
 
-
-.user-block-remember a {
-  color: #323232;
-
-  text-decoration: underline;
-  text-decoration-color: rgb(50, 50, 50, 0.3);
-}
-
-.user-block-remember a:hover, .user-block-remember a:focus {
-  color: #e84d37;
-  
-  text-decoration: underline;
-  text-decoration-color: rgb(232, 77, 55, 0.3);
-}
-
-.user-block-form-btn, 
-.user-block-form-btn:hover, 
-.user-block-form-btn:focus {
-  color: #fefefe;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-}
- 
 /*поля ввода*/
 
-.search-form input[type="search"], 
-.user-block-form input[type="email"],
-.user-block-form input[type="password"],
-.subscribe-form input[type="email"],
-.feedback-form input[type="text"],
-.feedback-form input[type="email"],
-.feedback-form textarea {
+ .input {
   color: #323232;
   font-size: 16px;
   font-weight: 700;
@@ -221,42 +229,41 @@ a:hover, a:focus {
   border: 1px solid #d3d3d2;
   border-radius: 5px;
 }
-
-.search-form input[type="search"]::placeholder,
-.user-block-form input[type="email"]::placeholder,
-.user-block-form input[type="password"]::placeholder,
-.subscribe-form input[type="email"]::placeholder,
-.feedback-form input[type="text"]::placeholder,
-.feedback-form input[type="email"]::placeholder,
-.feedback-form textarea::placeholder {
+.input::placeholder {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   color: #999999;
 } 
 
-/*поля ввода при наведении*/
-.search-form input[type="search"]:hover, 
-.user-block-form input[type="email"]:hover,
-.user-block-form input[type="password"]:hover,
-.subscribe-form input[type="email"]:hover,
-.feedback-form input[type="text"]:hover,
-.feedback-form input[type="email"]:hover,
-.feedback-form textarea:hover {
+.input:hover {
   border: 1px solid #b2b2b2;
 }
 
-/*поля ввода при нажатии курсора*/
-.search-form input[type="search"]:focus, 
-.user-block-form input[type="email"]:focus,
-.user-block-form input[type="password"]:focus,
-.subscribe-form input[type="email"]:focus,
-.feedback-form input[type="text"]:focus,
-.feedback-form input[type="email"]:focus,
-.feedback-form textarea:focus {
+.input:focus {
   border: 2px solid rgb(46,136,228,0.52);
 }
 
+.cart-full-table {
+  color: #323232;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.cart-one-item-price {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #999999;
+}
+
+.cart-content-price {
+  color: #323232;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+}
 
 .working-hours {
   text-align: right;
@@ -298,50 +305,34 @@ a:hover, a:focus {
   background-repeat: no-repeat;
 }
 
-.promo-item-btn {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-}
-
 .popular-item:hover,
 .popular-item:focus {
   color: #ffffff;
-
   background-color: #a0b3ab;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
-.popular-item h3, .catalog-item h3 {
+.popular-item h3, 
+.catalog-item h3 {
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
-
   text-decoration: underline;
   text-align: center;
 }
 
-.popular-item-price, .catalog-item-price {
+.popular-item-price, 
+.catalog-item-price {
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
-
   text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.popular-item-price > span,  .catalog-item-price > span  {
+.popular-item-price > span,  
+.catalog-item-price > span  {
   font-size: 30px;
 }
-
-.popular-item-btn, 
-.catalog-item-btn, 
-.catalog-item-btn:hover, 
-.catalog-item-btn:focus {
-  font-size: 30px;
-  line-height: 13px;
-}
-
 
 .popular-item-img img,
 .catalog-item-img img {
@@ -354,7 +345,6 @@ a:hover, a:focus {
   line-height: 22px;
   font-weight: 400;
   color: #323232;
-
   background-color: #e9dec1;
   background-image: url("../img/about-bg.jpg");
   background-position: 0 0;
@@ -376,7 +366,6 @@ a:hover, a:focus {
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
-
   background-color: #ffffff;
   background-image: url("../img/blog-post-img.jpg");
   background-position: 0 0;
@@ -393,7 +382,6 @@ a:hover, a:focus {
 
 .blog-preview a {
   color: #353535;
-
   text-decoration: underline;
   text-decoration-color: rgb(53, 53, 53, 0.3);
 }
@@ -410,7 +398,6 @@ a:hover, a:focus {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
-
   background-color: #f8f7f4;
   background-image: url("../img/subscribe.png");
   background-position: 0 0;
@@ -420,14 +407,6 @@ a:hover, a:focus {
 
 .subscribe-inner {
   background-color: #f8f7f4;
-
-}
-
-.subscribe-form-btn {
-  color: #fefefe;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
 }
 
 .contaсt-us {
@@ -447,12 +426,6 @@ a:hover, a:focus {
   font-weight: 700;
 }
 
-.contaсt-us-btn {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-}
-
 .workflow a,
 .copyright a {
   font-size: 13px;
@@ -462,8 +435,8 @@ a:hover, a:focus {
 
 .copyright {
   font-size: 12px;
-  line-height: 16px;
-  font-weight: 300;
+  line-height: 18px;
+  font-weight: 400;
   text-align: right;
 }
 
@@ -475,15 +448,7 @@ a:hover, a:focus {
 
   background-color: #f8f7f4;
   border: 1px solid #979797;
- }
-
-
- .feedback-btn {
-  color: #fefefe;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
- }
+}
 
  .breadcrumbs a {
   font-size: 14px;
@@ -497,6 +462,7 @@ a:hover, a:focus {
   line-height: 16px;
   font-weight: 300;
 }
+
 .breadcrumbs a:focus,
 .breadcrumbs a:hover {
   color: #ffbc9e;
@@ -513,7 +479,7 @@ a:hover, a:focus {
   border: none;
 }
 
- .filters select{
+.filters select {
   background-color: #a0b3ab;
   border-radius: 50px;
 }
@@ -538,10 +504,8 @@ a:hover, a:focus {
 }
 
 .pagination-item-current a,
-.pagination-item a:active
- {
+.pagination-item a:active {
   color: #353535;
-
   background-color: #fbfbfb;
   border-radius: 50%;
 }
