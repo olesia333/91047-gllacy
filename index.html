@@ -8,66 +8,76 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="container">
     <header class="main-header">
-      <nav class="main-nav" area-label="Навигация сайта">
-      	<a><img src="img/logo.svg" width="154" height="63" alt="Логотип магазина Глэйси"></a>
-      	<ul class="site-nav list">
-      	  <li class="site-nav-item site-nav-item-dropdown"><a href="#">Каталог</a>
-            <ul class="sub-menu list">
-              <li class="sub-menu-promo-link"><a href="novinki.html" class="link">Новинки</a></li>
-              <li><a href="catalog.html" >Сливочное</a></li>
-              <li><a href="sherbeti.html">Щербеты</a></li>
-              <li><a href="fruktovi-led.html">Фруктовый лед</a></li>
-              <li><a href="melorin.html">Мелорин</a></li>
-            </ul>
-          </li>
-          <li class="site-nav-item"><a href="dosravka.html">Доставка и оплата</a></li>
-          <li class="site-nav-item"><a href="compani.html">О Компании</a></li>
-        </ul>
-      </nav>
-      <ul class="user-nav list" area-label="Меню пользователя">
-        <li class="search">
-          <a href="#" class="search-btn user-nav-link">Поиск</a>
-          <div class="search-form user-menu-form">
-            <form action="https://echo.htmlacademy.ru" class="search-form">
-              <p>	
-                <input class="input" type="search" id="search" name="search" placeholder="Что ищем?" required>
-                <label for="search" class="visually-hidden">Что ищем?</label>
-                <button class="search-btn" type="submit">Искать</button>
-              </p>
-            </form>
-          </div>
-        </li>
-        <li class="user-block">
-          <a href="#" class="user-block-btn user-nav-link">Вход</a>
-          <div class="user-block-login user-menu-form">
-          	<form action="https://echo.htmlacademy.ru" class="user-block-form" method="post">
-          	  <p>
-                <input class="input" type="email" name="email" id="email" placeholder="Электронная почта" required>
-                <label for="email" class="visually-hidden">Электронная почта</label>
-              </p>
-              <p>
-              	<input class="input" type="password" name="password" id="password" placeholder="Пароль" required>
-              	<label for="password" class="visually-hidden">Пароль</label>
-              </p>
-              <button class="user-block-form-btn btn small-btn" type="submit">Войти</button> 
-          	</form>
-          	<div class="form-link">
-              <a href="remember.html" class="link-black">Забыли пароль?</a>
-          	  <a href="new-pass.html" class="link-black">Новая регистрация</a>
+      <div class="main-header-wrapper">
+        <nav class="main-nav" area-label="Навигация сайта">
+      	  <a class="header-logo">
+      	    <img src="img/logo.svg" width="154" height="63" alt="Логотип магазина Глэйси">
+      	  </a>
+      	  <ul class="site-nav list">
+      	    <li class="site-nav-item site-nav-item-dropdown"><a href="#">Каталог</a>
+              <ul class="sub-menu list">
+                <li class="sub-menu-promo-link"><a href="novinki.html" class="link">Новинки</a></li>
+                <li><a href="catalog.html" >Сливочное</a></li>
+                <li><a href="sherbeti.html">Щербеты</a></li>
+                <li><a href="fruktovi-led.html">Фруктовый лед</a>  </li>
+                <li><a href="melorin.html">Мелорин</a></li>
+              </ul>
+            </li>
+            <li class="site-nav-item"><a href="dosravka.html">Доставка и оплата</a></li>
+            <li class="site-nav-item"><a href="compani.html">О Компании</a></li>
+          </ul>
+        </nav>
+        <ul class="user-nav list" area-label="Меню пользователя">
+          <li class="search">
+            <a href="#" class="search-btn user-nav-link">Поиск</a>
+            <div class="search-form user-menu-form">
+              <form action="https://echo.htmlacademy.ru" class="search-form">
+                <p>	
+                  <input class="input" type="search" id="search" name="search" placeholder="Что ищем?" required>
+                  <label for="search" class="visually-hidden">Что ищем?</label>
+                  <button class="search-btn" type="submit">Искать  </button>
+                </p>
+              </form>
             </div>
-          </div>
-        </li>
-        <li class="cart">
-            <a href="cart.html" class="cart-btn user-nav-link">Корзина <span class="cart-btn-content">Пусто</span></a>
-        </li>
-      </ul>
+          </li>
+          <li class="user-block">
+            <a href="#" class="user-block-btn user-nav-link">Вход  </a>
+            <div class="user-block-login user-menu-form">
+          	  <form action="https://echo.htmlacademy.ru" class="user-block-form" method="post">
+          	    <p>
+                  <input class="input" type="email" name="email" id="email" placeholder="Электронная почта" required>
+                <label for="email" class="visually-hidden">Электронная почта</label>
+                </p>
+                <p>
+              	  <input class="input" type="password" name="password" id="password" placeholder="Пароль" required>
+              	  <label for="password" class="visually-hidden">Пароль</label>
+                </p>
+                <button class="user-block-form-btn btn small-btn" type="submit">Войти</button> 
+          	  </form>
+          	  <div class="form-link">
+                <a href="remember.html" class="link-black">Забыли пароль?</a>
+          	    <a href="new-pass.html" class="link-black">Новая регистрация</a>
+              </div>
+            </div>
+          </li>
+          <li class="cart">
+              <a href="cart.html" class="cart-btn user-nav-link">Корзина <span class="cart-btn-content">Пусто</span>  </a>
+          </li>
+        </ul>
+      </div>
       <div class="working-hours"><p>
       	<span class="work-time">С 10 до 20, ежедневно </span><a href="tel:88124502525"class="work-tel link">8 812 450-25-25</a></p>
       </div>
     </header>
+</div>
     <main class="container">
       <h1 class="visually-hidden">Магазин Глэйси</h1>
+	  <!--Слайдер-->
+	  <div class="slider">
+	  	
+	  </div>
 	  <!--Слайдер-->
       <section class="promo">
         <h2 class="visually-hidden">Промоакции</h2>
@@ -130,14 +140,15 @@
           <li class="features-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
         </ul>
       </article>
-      <section class="blog-preview">
-        <h2 class="blog-preview-title">Новое в нашем блоге</h2>
-        <a href="blog-post.html" class="blog-preview-link">10 способов сервировки фруктовых щербетов к столу</a>
-      </section>
-      <section class="subscribe">
-      	<div class="subscribe-inner">
-          <h2 class="visually-hidden">Наша рассылка</h2>
-          <p class="subscribe-description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+      <div class="columns-wrapper">
+        <section class="blog-preview">
+          <h2 class="blog-preview-title">Новое в нашем блоге</h2>
+          <a href="blog-post.html" class="blog-preview-link">10 способов сервировки фруктовых щербетов к столу</a>
+        </section>
+        <section class="subscribe">
+      	  <div class="subscribe-inner">
+            <h2 class="visually-hidden">Наша рассылка</h2>
+            <p class="subscribe-description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
   			  <form action="https://echo.htmlacademy.ru" class="subscribe-form" method="post">
   				  <p>
   					  <label for="subscribe-email" class="visually-hidden">Электронная почта</label>
@@ -147,21 +158,25 @@
   				  <button class="subscribe-form-btn btn small-btn" type="submit">Отправить</button>
   			  </form>
   		  </div>
-      </section>
+        </section>
+      </div>
       <section class="contaсt-us">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contact-us-map">
-        	<img src="img/map.jpg" alt="Карта офиса и офлайн-магазина Глейси">
+        	<img src="img/map.jpg" alt="Карта офиса и офлайн-магазина Глейси"  width="1200">
         </div>
-        <p class="contact-us-address">Адрес главного офиса и офлайн-магазина: <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
-        <p class="contact-us-tel">Для заказов по телефону: 
-        	<a href="tel:88124502525" class="link-black">8 812 450-25-25 </a>(c 10 до 20 ежедневно)</p>
-        <a href="#" class="contaсt-us-btn btn small-btn">Форма обратной связи</a>
+        <div class="contact-us-wrapper">
+          <p class="contact-us-address">Адрес главного офиса и офлайн-магазина: <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+          <p class="contact-us-tel">Для заказов по телефону: 
+        	  <a href="tel:88124502525" class="link-black">8 812 450-25-25 </a>(c 10 до 20 ежедневно)</p>
+          <a href="#" class="contaсt-us-btn btn small-btn">Форма обратной связи</a>
+        </div>
       </section>
     </main>
+    <div class="container">
     <footer class="footer">
       <div class="footer-social">
-        <b>Давайте дружить!</b>
+        <!-- <b>Давайте дружить!</b> -->
         <ul class="social-list list">
           <li><a class="social-btn link" href="#">Вконтакте</a></li>
           <li><a class="social-btn link" href="#">Фейсбук</a></li>
@@ -181,6 +196,7 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss" class="link">HTML Academy</a>
       </p>  
   	</footer>
+  </div>
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <p>Мы обязательно вам ответим</p>

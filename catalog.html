@@ -2,90 +2,95 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Магазин Глэйси. Каталог</title>
+    <title>Магазин Глэйси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="container">
     <header class="main-header">
-      <nav class="main-nav" area-label="Навигация сайта">
-        <a><img src="img/logo.svg" width="154" height="63" alt="Логотип магазина Глэйси"></a>
-        <ul class="site-nav list">
-          <li class="site-nav-item site-nav-item-dropdown"><a href="#">Каталог</a>
-            <ul class="sub-menu list">
-              <li class="sub-menu-promo-link"><a href="novinki.html">Новинки</a></li>
-              <li class="current"><a href="catalog.html">Сливочное</a></li>
-              <li><a href="sherbeti.html">Щербеты</a></li>
-              <li><a href="fruktovi-led.html">Фруктовый лед</a></li>
-              <li><a href="melorin.html">Мелорин</a></li>
-            </ul>
+      <div class="main-header-wrapper">
+        <nav class="main-nav" area-label="Навигация сайта">
+          <a class="header-logo">
+            <img src="img/logo.svg" width="154" height="63" alt="Логотип магазина Глэйси">
+          </a>
+          <ul class="site-nav list">
+            <li class="site-nav-item site-nav-item-dropdown"><a href="#">Каталог</a>
+              <ul class="sub-menu list">
+                <li class="sub-menu-promo-link"><a href="novinki.html" class="link">Новинки</a></li>
+                <li><a href="catalog.html" >Сливочное</a></li>
+                <li><a href="sherbeti.html">Щербеты</a></li>
+                <li><a href="fruktovi-led.html">Фруктовый лед</a>  </li>
+                <li><a href="melorin.html">Мелорин</a></li>
+              </ul>
+            </li>
+            <li class="site-nav-item"><a href="dosravka.html">Доставка и оплата</a></li>
+            <li class="site-nav-item"><a href="compani.html">О Компании</a></li>
+          </ul>
+        </nav>
+        <ul class="user-nav list" area-label="Меню пользователя">
+          <li class="search">
+            <a href="#" class="search-btn user-nav-link">Поиск</a>
+            <div class="search-form user-menu-form">
+              <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
+                <p> 
+                  <input class="input" type="search" id="search" name="search" placeholder="Что ищем?" required>
+                  <label for="search" class="visually-hidden">Что ищем?</label>
+                  <button class="search-btn" type="submit">Искать</button>
+                </p>
+              </form>
+            </div>
           </li>
-          <li class="site-nav-item current"><a href="dosravka.html">Доставка и оплата</a></li>
-          <li class="site-nav-item"><a href="compani.html">О Компании</a></li>
-        </ul>
-      </nav>
-      <ul class="user-nav list" area-label="Меню пользователя">
-        <li class="search">
-          <a href="#" class="search-btn user-nav-link">Поиск</a>
-          <div class="search-form user-menu-form">
-            <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
-              <p> 
-                <input class="input" type="search" id="search" name="search" placeholder="Что ищем?" required>
-                <label for="search" class="visually-hidden">Что ищем?</label>
-                <button class="search-btn" type="submit">Искать</button>
-              </p>
-            </form>
-          </div>
-        </li>
-        <li class="user-block">
-          <a href="#" class="user-block-btn user-nav-link">Вход</a>
-          <div class="user-block-login user-menu-form">
-            <form action="https://echo.htmlacademy.ru" class="user-block-form" method="post">
-              <p>
-                <input class="input" type="email" name="email" id="email" placeholder="Электронная почта" required>
-                <label for="email" class="visually-hidden">Электронная почта</label>
-              </p>
-              <p>
-                <input class="input" type="password" name="password" id="password" placeholder="Пароль" required>
+          <li class="user-block">
+            <a href="#" class="user-block-btn user-nav-link">Вход</a>
+            <div class="user-block-login user-menu-form">
+              <form action="https://echo.htmlacademy.ru" class="user-block-form" method="post">
+                <p>
+                  <input class="input" type="email" name="email" id="email" placeholder="Электронная почта" required>
+                  <label for="email" class="visually-hidden">Электронная почта</label>
+                </p>
+                <p>
+                  <input class="input" type="password" name="password" id="password" placeholder="Пароль" required>
                 <label for="password" class="visually-hidden">Пароль</label>
-              </p>
-              <button class="user-block-form-btn btn small-btn" type="submit">Войти</button>
-            </form>
-              <div class="form-link">
-                <a href="remeber.html" class="link-black">Забыли пароль?</a>
-                <a href="new-pass.html" class="link-black">Новая регистрация</a>
-              </div>
-          </div>
-        </li>
-        <li class="cart">
-          <a href="#" class="cart-btn user-nav-link">Корзина <span class="cart-btn-content">2 товара</span></a>
-          <div class="cart-content user-menu-form">
-            <table class="cart-full-table">
-              <tr class="cart-content-item">                   
-                <td><button class="cart-del-btn" type="button">Удалить</button></td>
-                <td class="cart-full-item-image">
-                  <img src="img/1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
-                </td>
-                <td class="cart-full-item-title">Сливочное с апельсиновым джемом</td>
-                <td class="cart-full-item-count">1,5 кг х <span class="cart-one-item-price">200 руб.</span></td>
-                <td class="cart-full-item-price">300 руб.</td>
-              </tr>    
-              <tr>                   
-                <td><button class="cart-del-btn" type="button">Удалить</button></td>
-                <td class="cart-full-item-image">
-                  <img src="img/3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33">
-                </td>
-                <td class="cart-full-item-title">Клубничный пломбир с присыпкой из белого шоколада</td>
-                <td class="cart-full-item-count">1,5 кг х <span class="cart-one-item-price">300 руб.</span></td>
-                <td class="cart-full-item-price">450 руб.</td>
-              </tr>
-            </table> 
-            <p class="cart-content-price">Итого: 750 руб.</p>
-            <button class="cart-content-btn btn small-btn" type="submit">Оформить заказ</button>
-          </div>
-        </li>
-      </ul>
+                </p>
+                <button class="user-block-form-btn btn small-btn" type="submit">Войти</button>
+              </form>
+                <div class="form-link">
+                  <a href="remeber.html" class="link-black">Забыли пароль?</a>
+                  <a href="new-pass.html" class="link-black">Новая регистрация</a>
+                </div>
+            </div>
+          </li>
+          <li class="cart">
+            <a href="#" class="cart-btn user-nav-link">Корзина <span class="cart-btn-content">2 товара</span></a>
+            <div class="cart-content user-menu-form">
+              <table class="cart-full-table">
+                <tr class="cart-content-item">                   
+                  <td><button class="cart-del-btn" type="button">Удалить</button></td>
+                  <td class="cart-full-item-image">
+                    <img src="img/1.jpg" alt="Пломбир с апельсиновым джемом" width="33" height="33">
+                  </td>
+                  <td class="cart-full-item-title">Сливочное с апельсиновым джемом</td>
+                  <td class="cart-full-item-count">1,5 кг х <span class="cart-one-item-price">200 руб.</span></td>
+                  <td class="cart-full-item-price">300 руб.</td>
+                </tr>    
+                <tr>                   
+                  <td><button class="cart-del-btn" type="button">Удалить</button></td>
+                  <td class="cart-full-item-image">
+                    <img src="img/3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33" height="33">
+                  </td>
+                  <td class="cart-full-item-title">Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td class="cart-full-item-count">1,5 кг х <span class="cart-one-item-price">300 руб.</span></td>
+                  <td class="cart-full-item-price">450 руб.</td>
+                </tr>
+              </table> 
+              <p class="cart-content-price">Итого: 750 руб.</p>
+              <button class="cart-content-btn btn small-btn" type="submit">Оформить заказ</button>
+            </div>
+          </li>
+        </ul>
+      </div>
       <div class="working-hours"><p>
         <span class="work-time">С 10 до 20, ежедневно, </span><a href="tel:88124502525"class="work-tel link">8 812 450-25-25</a></p>
       </div>
@@ -100,7 +105,7 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
           <form action="https://echo.htmlacademy.ru" class="form-filter" method="get">
-            <fieldset>
+            <fieldset class="filter-sort">
               <legend class="filters-title">Сортировка</legend>
               <select class="filter-select" name="sort" id="sort">
                 <option value="top" class="filter-select-opinion">по популярности</option>
@@ -110,34 +115,34 @@
               </select>
             </fieldset>
             <div class="range">
-              <!--Ползунок-->
+              <!--Ползунок-->range
             </div>
-            <fieldset>
-            <legend class="filter-option">Жирность:</legend>
-            <ul class="filter-fat-list list">
-              <li class="filter-fat-option">
-                <label class="filter-choice">
-                    <input type="radio" name="filter-fat-radio" value="zero">0%
-                  </label>
-              </li>
-              <li class="filter-fat-option">
-                <label>
-                    <input type="radio" name="filter-fat-radio" value="below-10" checked>до 10%
-                  </label>
-              </li>
-              <li class="filter-fat-option">
-                <label>
-                    <input type="radio" name="filter-fat-radio" value="below-30">до 30%
-                  </label>
-              </li>
-              <li class="filter-fat-option">
-                <label>
-                    <input type="radio" name="filter-fat-radio" value="above-30">выше 30%
-                  </label>
-              </li>
-            </ul>
-          </fieldset>
-            <fieldset class="filters-title">
+            <fieldset class="filter-fat">
+              <legend class="filter-option">Жирность:</legend>
+              <ul class="filter-fat-list list">
+                <li class="filter-fat-option">
+                  <label class="filter-choice">
+                      <input type="radio" name="filter-fat-radio" value="zero">0%
+                    </label>
+                </li>
+                <li class="filter-fat-option">
+                  <label>
+                      <input type="radio" name="filter-fat-radio" value="below-10" checked>до 10%
+                    </label>
+                </li>
+                <li class="filter-fat-option">
+                  <label>
+                      <input type="radio" name="filter-fat-radio" value="below-30">до 30%
+                    </label>
+                </li>
+                <li class="filter-fat-option">
+                  <label>
+                      <input type="radio" name="filter-fat-radio" value="above-30">выше 30%
+                    </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-fill">
               <legend>Наполнители</legend>
               <ul class="filter-fill-list list">
                 <li class="filter-opinion">
@@ -161,8 +166,8 @@
                   <label for="jam">джемы</label>
                 </li>
               </ul>
-              <button class="filter-btn" type="submit">Применить</button>
             </fieldset>
+            <button class="filter-btn" type="submit">Применить</button>
           </form>
       </section>
       <section class="catalog">
@@ -253,7 +258,7 @@
     </main>
     <footer class="footer">
       <div class="footer-social">
-        <b>Давайте дружить!</b>
+    <!--     <b>Давайте дружить!</b> -->
         <ul class="social-list list">
           <li><a class="social-btn link" href="#">Вконтакте</a></li>
           <li><a class="social-btn link" href="#">Фейсбук</a></li>
