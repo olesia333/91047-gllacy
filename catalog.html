@@ -8,9 +8,8 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-    <header class="main-header">
-      <div class="main-header-wrapper">
+    <header class="main-header container">
+      <div class="main-menu-wrapper">
         <nav class="main-nav" area-label="Навигация сайта">
           <a class="header-logo">
             <img src="img/logo.svg" width="154" height="63" alt="Логотип магазина Глэйси">
@@ -96,12 +95,14 @@
       </div>
   	</header>
   	<main class="container">
-      <h1>Сливочное мороженое</h1>
-      <ul class="breadcrumbs list">
-        <li><a class="link" href="index.html">Главная</a></li>
-        <li><a class="link" href="catalog.html">Каталог</a></li>
-        <li class="breadcrumbs-current">Сливочное</li>
-      </ul>
+      <div class="title-page">
+        <h1>Сливочное мороженое</h1>
+        <ul class="breadcrumbs list">
+          <li><a class="link" href="index.html">Главная</a></li>
+          <li><a class="link" href="catalog.html">Каталог</a></li>
+          <li class="breadcrumbs-current">Сливочное</li>
+        </ul>
+      </div>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
           <form action="https://echo.htmlacademy.ru" class="form-filter" method="get">
@@ -256,7 +257,7 @@
         </ul>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer container">
       <div class="footer-social">
     <!--     <b>Давайте дружить!</b> -->
         <ul class="social-list list">

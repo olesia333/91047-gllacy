@@ -1,14 +1,3 @@
-html {
-  max-width: 1200px;
-  min-width: 900px;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -30,6 +19,15 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 27px;
+  box-sizing: border-box;
+  outline: 2px solid red;
+}
+
 
 /*Ссылки*/
 
@@ -137,33 +135,30 @@ body {
   padding: 0;
 }
 
-.container {
-  margin: 0 2.3%;
-}
-
 /*----Шапка----*/
-.main-header-wrapper {
+.main-menu-wrapper {
   display: flex;
-  align-items: center;
-  margin-top: 3px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-top: 8px;
 }
 
 .main-nav {
   display: flex;
-  width: 77%;
+  width: 855px;
 }
 
 .header-logo img {
   width: 154px;
   height: 64px;
-  margin-right: 23px;
+  margin-right: 24px;
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  padding-top: 20px;
   width: 349px; 
 }
 
@@ -235,7 +230,8 @@ body {
 
 .user-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  padding-top: 23px;
   width: 266px;
   font-size: 14px;
   font-weight: 500;
@@ -248,6 +244,7 @@ body {
 }
 
 .user-nav-link {
+  margin-right: 25px;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px; 
@@ -255,6 +252,10 @@ body {
   color: #ffffff;
   border-radius: 15px;
   background-color: rgb(255, 255, 255, 0.2);
+}
+
+.user-nav-link:last-child {
+  margin-right: 0;
 }
 
 .user-nav-link:hover {
@@ -323,7 +324,8 @@ body {
 }
 
 .working-hours {
-  margin-top: -20px;
+  margin-top: -25px;
+  padding-right: 3px;
   text-align: right;
 }
 
@@ -347,7 +349,7 @@ body {
 /*Временно пока нет слайдера*/
 .slider {
   min-height: 515px;
-  min-width: 100%;
+  outline: 2px solid yellow;
 }
 
 /*----Акции----*/
@@ -358,6 +360,8 @@ body {
 
 .promo-list {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   font-size: 18px;
   line-height: 22px; 
@@ -365,9 +369,11 @@ body {
 
 .promo-item {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  width: calc(50% - 1.13%);
+  width: 561px;
   min-height: 230px;
+  box-sizing: border-box;
   border-radius: 16px;
   padding: 16px 20px 23px 19px;
 }
@@ -391,52 +397,68 @@ body {
   margin-left: auto;
 }
 
-.promo-list li:first-child {
-  background-color: #7a1020;
-  background-image: url("../img/malina.jpg");
+.promo-list .malina,
+.promo-list .chocolate {
   background-position: 0 0;
   background-repeat: no-repeat;
+
 }
 
-.promo-list li:last-child {
+.promo-list .malina {
+  background-color: #7a1020;
+  background-image: url("../img/malina.jpg");
+}
+
+.promo-list .chocolate {
   background-color: #2b140a;
   background-image: url("../img/chocolate.jpg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
 }
 
 /*----Хиты----*/
 
 .popular {
-  margin-bottom: 40px;
+  margin-bottom: 89px;
 }
 
-.popular-list, .catalog-list {
+.popular-list, 
+.catalog-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-bottom: 40px;
 }
 
-.popular-item {
+.popular-item, .catalog-item {
   position: relative;
-  width: calc(25% - 1.7%);
-  margin-bottom: 40px;
+  margin-right: 26px;
+  width: 267px;
 }
 
 .catalog-item {
-  position: relative;
-  width: calc(25% - 0.7%);
-  margin-bottom: 40px;
+  margin-bottom: 90px;
+}
+
+.popular-item:nth-child(4n), 
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .popular-item:hover,
 .popular-item:focus,
 .catalog-item:hover,
 .catalog-item:focus {
+  padding: 0 13px;
+  margin-right: 0px;
   color: #ffffff;
   background-color: #a0b3ab;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.popular-item:hover:nth-child(4n),
+.popular-item:focus:nth-child(4n),
+.catalog-item:hover:nth-child(4n),
+.catalog-item:focus:nth-child(4n) {
+  margin-left: -26px;
 }
 
 .popular-item a, .catalog a {
@@ -456,8 +478,16 @@ body {
   text-align: center;
 }
 
+.popular-item-title, 
+.catalog-item-title {
+  position: absolute;
+  top: 280px;
+}
+
 .popular-item-price, 
 .catalog-item-price {
+  position: absolute;
+  top: 164px;
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
@@ -471,8 +501,22 @@ body {
 
 .popular-item-img img,
 .catalog-item-img img {
-  background-size: 180px;
+  background-size: 266px;
   border-radius: 50%;
+}
+
+.popular-item a, 
+.catalog-item a {
+  display: none;
+}
+
+.popular-item-btn {
+  margin-top: 68px;
+}
+
+.popular-item:hover .popular-item-btn,
+.catalog-item:hover .catalog-item-btn {
+    display: block;
 }
 
 /*----Преимущества----*/
@@ -492,24 +536,29 @@ body {
 }
 
 .features-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; 
-  list-style: none;
+width: 1035px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;  
 }
+
 
 .features-item {
   position: relative;
-  width: calc(50% - 2.2%);
+  width: 470px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  text-align: left;
 }
+
 
 .features-title {
   margin: 0;
+  margin-bottom: 20px;
   padding-right: 90px; 
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
-  text-align: justify;
 }
 
 /*----Блог и рассылка----*/
@@ -521,19 +570,18 @@ body {
 }
 
 .blog-preview {
-  width: calc(50% - 1.13%);
-  min-height: 220px;
-  padding: 23px 19px;
+  width: 560px;
+  min-height: 222px;
   color: #353535;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
   background-color: #ffffff;
   background-image: url("../img/blog-post-img.jpg");
-  background-position: 0 0;
-  background-size: cover;
+  background-position: 17% 36%;
   background-repeat: no-repeat;
   border-radius: 15px;
+  box-sizing: border-box;
 }
 
 .blog-preview-title {
@@ -558,50 +606,65 @@ body {
 }
 
 .subscribe {
-  width: calc(50% - 1.13%);
-  min-height: 220px;
+  width: 560px;
   color: #5a5a5a;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
-  background-color: #f8f7f4;
-  background-image: url("../img/subscribe.png");
-  background-position: 0 0;
-  background-size: contain;
+  background-image:
+    url('../img/bg-light.jpg'),
+    repeating-linear-gradient(
+      135deg, 
+     #fe9e90 0px,
+     #fe9e90 5px,
+     #f8f7f4 5px, 
+     #f8f7f4 10px,
+     #92cdff 10px,
+     #92cdff 15px,
+     #f8f7f4 15px,
+     #f8f7f4 20px);
+  
+  background-size: 98% 96%, cover;
   background-repeat: repeat;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 15px;
-}
-
-.subscribe-inner {
-  margin-top: 5px; /**/
-  background-color: #f8f7f4;
 }
 
 /**----Контакты-----**/
 
 .contaсt-us {
+  min-height: 430px;
+  padding: initial;
   position: relative;
-  width: 100%;
   overflow: hidden;
   color: #323232;
   font-size: 14px;
   line-height: 20px;
   font-weight: 300;
-  background-color: #ffffff;
+}
+
+.contact-us-map {
+  position: absolute;
+  min-height: 435px;
+  width: 100%;
 }
 
 .contact-us-map img {
-  min-width: 900px;
-  max-width: 1200px;
+  width: 100%;
 
 }
 
 .contact-us-wrapper {
   width: 302px;
   padding: 28px 25px;
+  margin-left: 844px;
+  margin-top: 63px;
   display: flex;
   flex-direction: column;
   border-radius: 15px;
+  background: white;
+  box-sizing: border-box;
 
 }
 
@@ -626,7 +689,7 @@ body {
 }
 
 .footer-social {
-  width: calc(23.3% - 1.51%);
+  width: 190px;
   margin-top: 7px;
   margin-right: 40px;
 }
@@ -636,7 +699,7 @@ body {
 }
 
 .workflow-menu {
-  width: calc(48.86% - 3.02%);
+  width: 330px;
   margin-top: 10px;
 }
 
@@ -692,7 +755,6 @@ body {
 .breadcrumbs {
   display: flex;
   align-items: center;
-  align-self: flex-end;
 }
 
 .breadcrumbs a {
@@ -715,8 +777,13 @@ body {
   color: #ffbc9e;
 }
 
+.title-page {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
 .filters {
-  width: 880px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -725,7 +792,7 @@ body {
 
 .form-filter {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 39px;
