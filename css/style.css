@@ -1466,7 +1466,7 @@ p.contaсt-us-image {
 .breadcrumbs {
   text-decoration: none;
   position: absolute;
-  top: 83px;
+  top: 98px;
   display: flex;
   margin-bottom: 5px;
   padding: 0;
@@ -1507,6 +1507,7 @@ p.contaсt-us-image {
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
+  margin-top: -5px;
 }
 
 .filters {
